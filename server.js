@@ -11,12 +11,6 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-//app.use(session({
-//     secret: "GirlScript",
-//     resave: false,
-//     saveUnintialized: true,
-//   }))
-
   app.use(function (req, res, next) {
     next()
   })
