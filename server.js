@@ -45,9 +45,14 @@ mongoose.connection.on('connected',(err) => {
     NGOIssues: String,
 })
 
+var VictimSchema = new mongoose.Schema({
+  
+})
+
 console.log("HELLO WORLD");
 
 var ngo = mongoose.model('ngo', ngoSchema);
+var victim = mongoose.model('victims',VictimSchema);
 
 app.post('/addNgo',function(req,res)
 {
@@ -85,7 +90,6 @@ app.post('/addNgo',function(req,res)
       console.log("NGO Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
-    // res.render('profile',{obj : req.session.data});
 })
 
 
