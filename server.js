@@ -44,9 +44,20 @@ mongoose.connection.on('connected',(err) => {
     ngophone: String,
     NGOIssues: String,
 })
-
+ 
 var VictimSchema = new mongoose.Schema({
-  
+  victimName: String,
+  gender: String,
+  age: String,
+  phone: String,
+  email: String,
+  address: String,
+  issue: String,
+  status: String,
+  extent: String,
+  criminal_name: String,
+  criminal_relation: String,
+  description: String,
 })
 
 console.log("HELLO WORLD");
@@ -65,28 +76,22 @@ app.post('/addNgo',function(req,res)
     throw err;
     else
     {
-    // var transporter = nodemailer.createTransport({
-    //   service: 'gmail',
-    //   auth: {
-    //     user: process.env.EMAIL,
-    //     pass: process.env.PASSWORD
-    //   }
-    // });
+      console.log("NGO Added");
+      res.sendFile(path.join(__dirname + '/public/index.html'));  }
+    })
+})
 
-    // var mailOptions = {
-    //   from: 'hack7jack@gmail.com',
-    //   to: req.body.username,
-    //   subject: 'Welcome To CQ',
-    //   text: "Your Username is: " + req.body.username + "\n" + " Password is: " + req.body.password + "\n" + " Hope your Journey goes smooth."
-    // };
-
-    // transporter.sendMail(mailOptions, function(error, info){
-    //   if (error) {
-    //     console.log(error);
-    //   } else {
-    //     console.log('Email sent: ' + info.res);
-    //   }
-    //});
+app.post('/addVictim',function(req,res)
+{
+  console.log("POST CALLED");
+  var obj = req.body;
+  console.log(obj);
+  ngo.create(obj,function(error,result)
+  {
+    if(error)
+    throw err;
+    else
+    {
       console.log("NGO Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })

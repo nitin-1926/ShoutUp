@@ -23,7 +23,7 @@
     <link href="Victim_css/main.css" rel="stylesheet" media="all">
 </head>
 
-<body>
+<body> 
     <div class="page-wrapper bg-dark p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
@@ -35,7 +35,7 @@
                         <div class="form-row">
                             <div class="name">Full name</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="full_name">
+                                <input class="input--style-6" type="text" name="victimName">
                             </div>
                         </div>
                         <div class="form-row">
@@ -52,7 +52,7 @@
                             <div class="name">Age</div>
                             <div class="value">
                             	<div class="input-group">
-                                	<input class="input--style-6" type="text" name="Age">
+                                	<input class="input--style-6" type="text" name="age">
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <div class="form-row">
                             <div class="name">Issue you are facing</div>
                             <div class="value">
-                                <select name="Issue">
+                                <select name="issue">
 								  <option value="1">Domestic Abuse</option>
 								  <option value="2">Dowry Harrasment</option>
 								  <option value="3">Death Threats</option>\
@@ -92,7 +92,7 @@
                         <div class="form-row">
                             <div class="name">Is it still happening</div>
                             <div class="value">
-                                <select name="Status">
+                                <select name="status">
 								  <option value="1">Yes /option>
 								  <option value="2">NO</option>
 								</select>
@@ -101,7 +101,7 @@
                         <div class="form-row">
                             <div class="name">Extent of Abuse</div>
                             <div class="value">
-                                <select name = "Extent">
+                                <select name = "extent">
                                 	<option>Just Started</option>
                                 	<option>Intermediate</option>
                                 	<option>High</option>
@@ -118,7 +118,7 @@
                         <div class="form-row">
                             <div class="name">Your relation with criminal</div>
                             <div class="value">
-                                <select name = "Relation_Criminal">
+                                <select name = "criminal_relation">
                                 	<option>Father-In-Law</option>
                                 	<option>Mother-In-Law</option>
                                 	<option>In-Laws</option>
@@ -133,7 +133,7 @@
                             	<textarea class="textarea--style-6" name="description" placeholder="Feel Comfortable in Telling"></textarea>
                             </div>
                         </div>
-                        <div class="form-row">
+                        <!-- <div class="form-row">
                             <div class="name">Upload Proof(If Any)</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
@@ -143,11 +143,11 @@
                                 </div>
                                 <div class="label--desc">Upload any other relevant file. Max file size 10 MB</div>
                             </div>
+                        </div> -->
+                        <div class="card-footer">
+                            <button onclick = "VictimData()" class="btn btn--radius-2 btn--blue-2" type="submit">Report</button>
                         </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <button onclick = "VictimData()" class="btn btn--radius-2 btn--blue-2" type="submit">Report</button>
                 </div>
             </div>
         </div>
