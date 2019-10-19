@@ -67,7 +67,7 @@ var victim = mongoose.model('victims',VictimSchema);
 
 app.post('/addNgo',function(req,res)
 {
-  console.log("POST CALLED");
+  console.log("Victim CALLED");
   var obj = req.body;
   console.log(obj);
   ngo.create(obj,function(error,result)
@@ -76,23 +76,23 @@ app.post('/addNgo',function(req,res)
     throw err;
     else
     {
-      console.log("NGO Added");
+      console.log("Victim Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
 
 app.post('/addVictim',function(req,res)
 {
-  console.log("POST CALLED");
+  // console.log("POST CALLED");
   var obj = req.body;
-  console.log(obj);
-  ngo.create(obj,function(error,result)
+  // console.log(obj);
+  victim.create(obj,function(error,result)
   {
     if(error)
     throw err;
     else
     {
-      console.log("NGO Added");
+      // console.log("NGO Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
