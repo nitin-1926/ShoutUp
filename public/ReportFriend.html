@@ -26,24 +26,24 @@
                     <h2 class="title">Report For Friend (Fill Your Details First)</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form action="/Rf" method="POST">
                         <div class="form-row">
                             <div class="name">Your Full name</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="full_name">
+                                <input class="input--style-6" type="text" name="rf_name">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Your Age</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="full_name">
+                                <input class="input--style-6" type="text" name="rf_age">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Your Contact Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="phone">
+                                    <input class="input--style-6" type="text" name="rf_phone">
                                 </div>
                             </div>
                         </div>
@@ -51,27 +51,27 @@
                             <div class="name">Your Email address</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="email" name="rf_email" placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Your Address</div>
                             <div class="value">
-                                    <input class="input--style-6" type="text" name="address">
+                                    <input class="input--style-6" type="text" name="rf_address">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Victim's Full name</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="full_name">
+                                <input class="input--style-6" type="text" name="rf_victim_name">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Victim's Contact Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="phone">
+                                    <input class="input--style-6" type="text" name="rf_victim_phone">
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                             <div class="name">Relationship with victim</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <select name="Relationship">
+                                    <select name="rf_victim_relationship">
                                         <option>Neighbour</option>
                                         <option>Friend</option>
                                         <option>Relative</option>
@@ -92,7 +92,7 @@
                             <div class="name">Description</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="message" placeholder="Mention any relevant details regarding the victim and the abuse."></textarea>
+                                    <textarea class="textarea--style-6" name="rf_description" placeholder="Mention any relevant details regarding the victim and the abuse."></textarea>
                                 </div>
                             </div>
                         </div>

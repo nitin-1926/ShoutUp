@@ -54,10 +54,23 @@ var VictimSchema = new mongoose.Schema({
   description: String,
 })
 
+var ReportAsAFriendSchema = new mongoose.Schema({
+  rf_name: String,
+  rf_age: String,
+  rf_phone: String,
+  rf_email: String,
+  rf_address: String,
+  rf_victim_name: String,
+  rf_victim_phone: String,
+  rf_victim_relationship: String,
+  rf_description: String,
+})
+
 console.log("HELLO WORLD");
 
 var ngo = mongoose.model('ngo', ngoSchema);
 var victim = mongoose.model('victims',VictimSchema);
+var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
 
 app.post('/addNgo',function(req,res)
 {
@@ -77,20 +90,29 @@ app.post('/addNgo',function(req,res)
 
 app.post('/addVictim',function(req,res)
 {
-  // console.log("POST CALLED");
   var obj = req.body;
-  // console.log(obj);
   victim.create(obj,function(error,result)
   {
     if(error)
     throw err;
     else
     {
-      // console.log("NGO Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
 
+app.post('/Rf',function(req,res)
+{
+  var obj = req.body;
+  reporter.create(obj,function(error,result)
+  {
+    if(error)
+    throw err;
+    else
+    {
+      res.sendFile(path.join(__dirname + '/public/Victim.html'));  }
+    })
+})
 
 
 app.listen(3000,function()					//Server Running Confirmation
