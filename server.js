@@ -1,10 +1,6 @@
 var express = require('express')
 var path = require('path')
 var app = express()
-// var ejs = require('ejs')
-// var session = require('express-session')
-// var nodemailer = require('nodemailer');
-// var multer = require('multer');
 
 app.use(express.static(path.join(__dirname,'public')));
 
@@ -110,12 +106,13 @@ app.post('/Rf',function(req,res)
     throw err;
     else
     {
+      
       res.sendFile(path.join(__dirname + '/public/Victim.html'));  }
     })
 })
 
-
-app.listen(3000,function()					//Server Running Confirmation
+//Server Running Confirmation
+app.listen(3000,function()
 {
       console.log("Running on port 3000");
 });
