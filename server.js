@@ -41,6 +41,7 @@ var VictimSchema = new mongoose.Schema({
   age: String,
   phone: String,
   email: String,
+  location: String,
   address: String,
   issue: String,
   status: String,
@@ -88,6 +89,7 @@ app.post('/addVictim',function(req,res)
     throw err;
     else
     {
+      console.log(ngo.find({ NGOLocation : obj.location}));
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
