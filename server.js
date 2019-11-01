@@ -68,16 +68,13 @@ var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
 
 app.post('/addNgo',function(req,res)
 {
-  console.log("NGO CALLED");
   var obj = req.body;
-  console.log(obj);
   ngo.create(obj,function(error,result)
   {
     if(error)
     throw err;
     else
     {
-      console.log("NGO Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
@@ -104,7 +101,6 @@ app.post('/Rf',function(req,res)
     throw err;
     else
     {
-      
       res.sendFile(path.join(__dirname + '/public/Victim.html'));  }
     })
 })
