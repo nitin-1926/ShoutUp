@@ -89,7 +89,7 @@ app.post('/addVictim',function(req,res)
     throw err;
     else
     {
-      console.log(ngo.find({ NGOLocation : obj.location}));
+      ngo.find({ NGOLocation : obj.location}).then(data => {console.log(data)});
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
