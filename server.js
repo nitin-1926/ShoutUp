@@ -62,15 +62,13 @@ var ReportAsAFriendSchema = new mongoose.Schema({
   rf_description: String,
 })
 
-console.log("HELLO WORLD");
-
 var ngo = mongoose.model('ngo', ngoSchema);
 var victim = mongoose.model('victims',VictimSchema);
 var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
 
 app.post('/addNgo',function(req,res)
 {
-  console.log("Victim CALLED");
+  console.log("NGO CALLED");
   var obj = req.body;
   console.log(obj);
   ngo.create(obj,function(error,result)
@@ -79,7 +77,7 @@ app.post('/addNgo',function(req,res)
     throw err;
     else
     {
-      console.log("Victim Added");
+      console.log("NGO Added");
       res.sendFile(path.join(__dirname + '/public/index.html'));  }
     })
 })
