@@ -2010,6 +2010,20 @@ figure figcaption {
   font-style: italic;
   font-size: .8rem; }
 
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    border: none;
+  }
+  
+  #myBtn:hover {
+    background-color: transparent;
+  }
+
 /*PRELOADING------------ */
 #overlayer {
   width: 100%;
