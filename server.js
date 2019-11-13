@@ -31,7 +31,7 @@ mongoose.connection.on('connected',(err) => {
     filingPersonName: String,
     email: String,
     address: String,
-    state: String,
+    newstate: String,
     employement: String,
     experience: String,
     contactno: String,
@@ -72,6 +72,7 @@ var reporter = mongoose.model('friendreport',ReportAsAFriendSchema);
 app.post('/addNgo',function(req,res)
 {
   var obj = req.body;
+  console.log(obj);
   ngo.create(obj,function(error,result)
   {
     if(error)
