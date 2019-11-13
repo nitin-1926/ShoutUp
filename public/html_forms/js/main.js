@@ -18,7 +18,6 @@
       $("#state").children('.init').html($(this).html());
       allOptions.toggle();
   });
-
 // (function($) {
 
 //   $('#gender').parent().append('<ul class="list-item" id="newgender" name="gender"></ul>');
