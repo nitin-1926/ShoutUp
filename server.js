@@ -31,7 +31,7 @@ mongoose.connection.on('connected',(err) => {
     filingPersonName: String,
     email: String,
     address: String,
-    newstate: String,
+    ngostate: String,
     employement: String,
     experience: String,
     contactno: String,
